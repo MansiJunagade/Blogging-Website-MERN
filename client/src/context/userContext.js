@@ -4,6 +4,8 @@ import { createContext, useEffect, useState } from "react";
 export const UserContext = createContext();
 
 const UserProvider = ({children}) => {
+    const url = "https://blogging-website-mern-server.onrender.com"
+    
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')))
 
     useEffect(() => {
